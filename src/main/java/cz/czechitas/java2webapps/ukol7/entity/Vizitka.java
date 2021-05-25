@@ -62,6 +62,7 @@ public class Vizitka {
         this.email = email;
         this.telefon = telefon;
         this.web = web;
+        this.celaAdresa = ulice + obec + PSC;
     }
 
     public Vizitka() {
@@ -143,7 +144,4 @@ public class Vizitka {
         return celaAdresa;
     }
 
-    public void setCelaAdresa() {
-        this.celaAdresa = getUlice() + getObec() + getPSC();
-    }
 }
