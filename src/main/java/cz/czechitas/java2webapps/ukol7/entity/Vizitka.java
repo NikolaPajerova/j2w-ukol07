@@ -34,7 +34,7 @@ public class Vizitka {
 
     @Length(max = 5)
     @NotBlank
-    private String PSC;
+    private String psc;
 
     @Length(max = 100)
     @NotBlank
@@ -50,7 +50,6 @@ public class Vizitka {
     @NotBlank
     private String web;
 
-    private String celaAdresa;
 
     public Vizitka(Long id, @Length(max = 100) @NotBlank String cele_jmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String PSC, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
         this.id = id;
@@ -58,11 +57,10 @@ public class Vizitka {
         this.firma = firma;
         this.ulice = ulice;
         this.obec = obec;
-        this.PSC = PSC;
+        this.psc = psc;
         this.email = email;
         this.telefon = telefon;
         this.web = web;
-        this.celaAdresa = ulice + obec + PSC;
     }
 
     public Vizitka() {
@@ -109,11 +107,11 @@ public class Vizitka {
     }
 
     public String getPSC() {
-        return PSC;
+        return psc;
     }
 
     public void setPSC(String PSC) {
-        this.PSC = PSC;
+        this.psc = PSC;
     }
 
     public String getEmail() {
@@ -141,7 +139,7 @@ public class Vizitka {
     }
 
     public String getCelaAdresa() {
-        return celaAdresa;
+        return ulice + obec + psc;
     }
 
 }

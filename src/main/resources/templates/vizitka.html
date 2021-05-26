@@ -11,18 +11,18 @@
 </head>
 <body>
 <div class="detail">
-    <div class="vizitka" th:each="vizitka">
-        <div class="jmeno" th:text="vizitka.cele_jmeno">Dita (Přikrylová) Formánková</div>
-        <div class="firma" th:text="vizitka.firma">Czechitas z. s.</div>
+    <div class="vizitka" th:each="vizitka : ${vizitky}">
+        <div class="jmeno" th:text="${vizitka.cele_jmeno}">Dita (Přikrylová) Formánková</div>
+        <div class="firma" th:text="${vizitka.firma}">Czechitas z. s.</div>
         <div class="udaje">
-            <div class="adresa">
-                <div th:text="vizitka.ulice">Václavské náměstí 837/11</div>
-                <div><span th:text="vizitka.PSC">11000</span> <span th:text="vizitka.obec">Praha 1</span></div>
+            <div class="adresa" th:text="${vizitka.celaAdresa}">
+                <div>Václavské náměstí 837/11</div>
+                <div><span>11000</span> <span>Praha 1</span></div>
             </div>
             <div class="kontakty">
-                <div><i class="las la-at" th:text="vizitka.email"></i> <span>dita@czechitas.cs</span></div>
-                <div><i class="las la-phone-alt" th:text="vizitka.telefon"></i> <span>+420 800123456</span></div>
-                <div><i class="las la-globe" th:text="vizitka.web"></i> <span>www.czechitas.cz</span></div>
+                <div><i class="las la-at" th:text="${vizitka.email}"></i> <span>dita@czechitas.cs</span></div>
+                <div><i class="las la-phone-alt" th:text="${vizitka.telefon}"></i> <span>+420 800123456</span></div>
+                <div><i class="las la-globe" th:text="${vizitka.web}"></i> <span>www.czechitas.cz</span></div>
             </div>
         </div>
     </div>
