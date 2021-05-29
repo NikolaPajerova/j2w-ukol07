@@ -18,7 +18,7 @@ public class Vizitka {
 
     @Length(max = 100)
     @NotBlank
-    private String cele_jmeno;
+    private String celeJmeno;
 
     @Length(max = 100)
     @NotBlank
@@ -51,9 +51,9 @@ public class Vizitka {
     private String web;
 
 
-    public Vizitka(Long id, @Length(max = 100) @NotBlank String cele_jmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String PSC, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
+    public Vizitka(Long id, @Length(max = 100) @NotBlank String celeJmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String psc, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
         this.id = id;
-        this.cele_jmeno = cele_jmeno;
+        this.celeJmeno = celeJmeno;
         this.firma = firma;
         this.ulice = ulice;
         this.obec = obec;
@@ -74,12 +74,12 @@ public class Vizitka {
         this.id = id;
     }
 
-    public String getCele_jmeno() {
-        return cele_jmeno;
+    public String getCeleJmeno() {
+        return celeJmeno;
     }
 
-    public void setCele_jmeno(String cele_jmeno) {
-        this.cele_jmeno = cele_jmeno;
+    public void setCeleJmeno(String celeJmeno) {
+        this.celeJmeno = celeJmeno;
     }
 
     public String getFirma() {
