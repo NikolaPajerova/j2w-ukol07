@@ -14,7 +14,7 @@ import javax.validation.constraints.Pattern;
 public class Vizitka {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Length(max = 100)
     @NotBlank
@@ -51,7 +51,7 @@ public class Vizitka {
     private String web;
 
 
-    public Vizitka(Long id, @Length(max = 100) @NotBlank String celeJmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String psc, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
+    public Vizitka(Integer id, @Length(max = 100) @NotBlank String celeJmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String psc, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
         this.id = id;
         this.celeJmeno = celeJmeno;
         this.firma = firma;
@@ -66,11 +66,11 @@ public class Vizitka {
     public Vizitka() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -37,7 +37,7 @@ public class VizitkyKontroler {
                 .addObject("vizitky", seznamVizitek);
     }
 
-    @GetMapping("/detail")
+    @GetMapping("/{id:[0-9]+}")
     public Object detail(@PathVariable Integer id) {
         Optional<Vizitka> vizitka = repository.findById(id);
         if (vizitka.isPresent()) {
@@ -55,6 +55,7 @@ public class VizitkyKontroler {
 
     @PostMapping("/nova")
     public Object pridat(@ModelAttribute("vizitka") @Valid Vizitka vizitka, BindingResult bindingResult) {
+        vizitka.setId(null);
         if (bindingResult.hasErrors()) {
             return "formular";
         }
@@ -62,8 +63,8 @@ public class VizitkyKontroler {
         return "redirect:/";
     }
 
-    @PostMapping("/detail")
-    public Object upravit(@PathVariable long id, @ModelAttribute("vizitka") @Valid Vizitka vizitka, BindingResult bindingResult) {
+    @PostMapping("/{id:[0-9]+}")
+    public Object upravit(@PathVariable Integer id, @ModelAttribute("vizitka") @Valid Vizitka vizitka, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "formular";
         }

@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="detail">
-    <div class="vizitka" th:each="vizitka : ${vizitky}">
+    <div class="vizitka" th:href="@{/{id}(id=${vizitka.id})}">
         <div class="jmeno" th:text="${vizitka.celeJmeno}">Dita (Přikrylová) Formánková</div>
         <div class="firma" th:text="${vizitka.firma}">Czechitas z. s.</div>
         <div class="udaje">
