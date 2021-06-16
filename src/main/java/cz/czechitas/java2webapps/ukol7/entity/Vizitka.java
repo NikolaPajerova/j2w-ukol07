@@ -66,6 +66,14 @@ public class Vizitka {
     public Vizitka() {
     }
 
+    public String getPsc() {
+        return psc;
+    }
+
+    public void setPsc(String psc) {
+        this.psc = psc;
+    }
+
     public Integer getId() {
         return id;
     }
