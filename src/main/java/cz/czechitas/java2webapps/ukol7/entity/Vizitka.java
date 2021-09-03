@@ -51,6 +51,18 @@ public class Vizitka {
     private String web;
 
 
+    /**
+     *
+     * @param id
+     * @param celeJmeno
+     * @param firma
+     * @param ulice
+     * @param obec
+     * @param psc
+     * @param email
+     * @param telefon
+     * @param web
+     */
     public Vizitka(Integer id, @Length(max = 100) @NotBlank String celeJmeno, @Length(max = 100) @NotBlank String firma, @Length(max = 100) @NotBlank String ulice, @Length(max = 100) @NotBlank String obec, @Length(max = 5) @NotBlank String psc, @Length(max = 100) @NotBlank @Email String email, @Length(max = 20) @NotBlank @Pattern(regexp = "\\+?\\d+") String telefon, @Length(max = 100) @NotBlank String web) {
         this.id = id;
         this.celeJmeno = celeJmeno;
